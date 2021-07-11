@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import { MessageProvider } from "./contexts/MessageContext";
 import { CatgoriasContext } from "./contexts/CategoriasContext";
 import { ProdutosContext } from "./contexts/ProductsContext";
 import { LoadContext } from "./contexts/LoadingContext";
 import { GlobalStyle } from "./styles/GlobalStyle";
-import Message from "./components/message/Message";
-import Products from "./components/products/products";
-import Loading from "./components/loading/loading";
+import Message from "./components/Message/Message";
+import Products from "./components/Products/products";
+import Loading from "./components/Loading/Loading";
 function App() {
   return (
     <div className="App">

@@ -4,6 +4,19 @@ export const GlobalStyle = createGlobalStyle`
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+html input {
+  outline: none;
+}
+
+
 html,
 body,
 div,
