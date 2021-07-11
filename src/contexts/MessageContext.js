@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { createContext, useState } from "react";
 
-const MessageContext = React.createContext();
+export const MessageContext = createContext();
 
-export default MessageContext;
+export function MessageProvider({ children }) {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <MessageContext.Provider value={{ hasError, setHasError }}>
+      {children}
+    </MessageContext.Provider>
+  );
+}
