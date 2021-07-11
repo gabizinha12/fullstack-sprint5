@@ -9,7 +9,7 @@ function Filters() {
     <section class="main__filters filters">
       <ul class="filters__list">
         {produtos.filters.map((filter) => (
-          <FilterItem label={filter.label} />
+          <FilterItem label={filter.label} key={filter.id} />
         ))}
       </ul>
     </section>

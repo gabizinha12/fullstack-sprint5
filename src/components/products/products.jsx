@@ -19,7 +19,7 @@ function Products() {
   const { produtos, setProdutos } = produtosData;
   useEffect(() => {
     setLoading({ ...loading, show: load });
-    console.log(load);
+    console.log(produtos);
     setProdutos({
       ...produtos,
       products: result ? result.products : [],
@@ -37,6 +37,7 @@ function Products() {
             <ol className="products__list">
               {produtos.products.map((e) => (
                 <Product
+                  key={e.id}
                   description={e.name}
                   price={e.price}
                   image={`${e.image}`}
