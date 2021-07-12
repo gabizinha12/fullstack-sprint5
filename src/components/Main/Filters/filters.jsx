@@ -1,18 +1,18 @@
 import FilterItem from "../filterItem/filterItem";
 import React, { useContext } from "react";
 import { ProductsContext } from "../../contexts/ProductsContext";
-
+import { Filter, UnorderedList } from "./styles";
 function Filters() {
   const filterData = useContext(ProductsContext);
   const { produtos } = filterData;
   return (
-    <section class="main__filters filters">
-      <ul class="filters__list">
+    <Filter>
+      <UnorderedList>
         {produtos.filters.map((filter) => (
           <FilterItem label={filter.label} key={filter.id} />
         ))}
-      </ul>
-    </section>
+      </UnorderedList>
+    </Filter>
   );
 }
 
