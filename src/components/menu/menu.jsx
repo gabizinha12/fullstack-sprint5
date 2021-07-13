@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import { CategoriasContext } from "../../contexts/CategoriasContext";
-import MenuItem from "./menuItem/menuItem";
-import { MenuList } from "./styles";
+import MenuItem from "./MenuItem/MenuItem";
+import { CategoriesNavbar, UnorderedList } from "./styles";
 
 function Menu() {
   const categorias = useContext(CategoriasContext);
   return (
-    <nav class="header__menu">
-      <ul class="menu__list">
+    <CategoriesNavbar>
+      <UnorderedList>
         {categorias.categorias.all.map((el) => (
           <MenuItem key={el.id} label={el.label} link={el.link} />
         ))}
-      </ul>
-    </nav>
+      </UnorderedList>
+    </CategoriesNavbar>
   );
 }
 

@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const MenuList = styled.ul`
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #000;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  vertical-align: baseline;
+export const CategoriesNavbar = styled.nav`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const UnorderedList = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;

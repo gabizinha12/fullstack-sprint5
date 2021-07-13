@@ -6,10 +6,3 @@ export const MainComponent = styled.main`
   max-width: 1100px;
   padding: 16px;
 `;
-
-export const MainProducts = styled.section`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 100%;
-  max-height: 100%;
-`;

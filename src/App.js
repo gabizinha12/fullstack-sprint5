@@ -8,7 +8,7 @@ import { ProdutosContext } from "./contexts/ProductsContext";
 import { LoadContext } from "./contexts/LoadingContext";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import Message from "./components/Message/Message";
-import Products from "./components/Products/products";
+import Products from "./components/Main/Products/Products";
 import Loading from "./components/Loading/Loading";
 function App() {
   return (

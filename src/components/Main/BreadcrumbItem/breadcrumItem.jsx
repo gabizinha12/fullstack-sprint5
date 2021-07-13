@@ -1,10 +1,10 @@
 import React from "react";
-
+import { ListItem, ItemLink } from "./styles";
 function BreadcrumbItem({ value }) {
   return (
-    <li class="breadcrumbs__item breadcrumbs__item--active">
-      <span class="breadcrumbs__link">{value}</span>
-    </li>
+    <ListItem>
+      <ItemLink>{value}</ItemLink>
+    </ListItem>
   );
 }
 

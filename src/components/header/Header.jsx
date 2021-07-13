@@ -7,11 +7,24 @@ import CloseIcon from "../../assets/close.svg";
 import LogoResposiveIcon from "../../assets/rchlo.svg";
 import LogoIcon from "../../assets/riachuelo.svg";
 import SearchIcon from "../../assets/search.svg";
-
+import {
+  Header as HeaderComponent,
+  Container,
+  Mobile,
+  Desktop,
+  Search,
+  Logo,
+  LogoImg,
+  Drawer,
+  DrawerIcon,
+  DrawerText,
+  SearchImg,
+  SearchInput,
+} from "./styles";
 // components
-import Menu from "../menu/menu";
+import Menu from "../Menu/Menu";
 
-function Header() {
+export function Header() {
   const categoriasData = useContext(CategoriasContext);
   const { categorias, setCategorias } = categoriasData;
   const [response, loading, error] = useFetch(
@@ -26,38 +39,42 @@ function Header() {
     });
   }, [response, error]);
   return (
-    <header class="header">
-      <div class="header__container">
-        <div class="header__mobile">
-          <div class="header__drawer menu header__drawer--active">
-            <img class="menu__img" src={MenuIcon} alt="open menu" />
-            <p class="menu__title">menu</p>
-          </div>
-          <div class="header__drawer close">
-            <img src={CloseIcon} alt="close menu" />
-            <p class="close__title">fechar</p>
-          </div>
-          <h1 class="header__logo">
-            <img class="header__img" src={LogoResposiveIcon} alt="RCHLO" />
-          </h1>
-        </div>
-        <div class="header__desktop">
-          <h1 class="header__logo">
-            <img class="header__img" src={LogoIcon} alt="Riachuelo" />
-          </h1>
-        </div>
-        <div class="header__search">
-          <img class="header__icon" src={SearchIcon} alt="Buscar" />
-          <input
-            class="header__input"
+    <HeaderComponent>
+      <Container>
+        <Mobile inactive>
+          <Drawer active>
+            <DrawerIcon src={MenuIcon} alt="menu" />
+            <DrawerText>menu</DrawerText>
+          </Drawer>
+
+          <Drawer>
+            <DrawerIcon src={CloseIcon} alt="fechar menu" />
+            <DrawerText>fechar</DrawerText>
+          </Drawer>
+
+          <Logo>
+            <LogoImg src={LogoResposiveIcon} alt="Logo Riachuelo" />
+          </Logo>
+        </Mobile>
+
+        <Desktop active>
+          <Logo>
+            <LogoImg src={LogoIcon} alt="Logo Riachuelo" />
+          </Logo>
+        </Desktop>
+
+        <Search>
+          <SearchImg src={SearchIcon} alt="lupa" />
+
+          <SearchInput
             type="search"
             placeholder="O que você está procurando?"
           />
-        </div>
+        </Search>
 
         <Menu />
-      </div>
-    </header>
+      </Container>
+    </HeaderComponent>
   );
 }
 

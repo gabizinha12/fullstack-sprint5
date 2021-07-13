@@ -1,14 +1,15 @@
 import React, { useContext, useEffect } from "react";
-import { ProductsContext } from "../../contexts/ProductsContext";
-import Product from "../product/product";
-import Breadcrumbs from "../breadcrumbs/breadcrumbs";
-import Filters from "../filters/filters";
+import { ProductsContext } from "../../../contexts/ProductsContext";
+import Product from "../Product/Product";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Filters from "../Filters/Filters";
 
 // hooks
-import { useFetch } from "../../hooks/useFetch";
-import { LoadingContext } from "../../contexts/LoadingContext";
+import { useFetch } from "../../../hooks/useFetch";
+import { LoadingContext } from "../../../contexts/LoadingContext";
+import { ProductsComponent, OrderedList } from "./styles";
 
-function Products() {
+export default function Products() {
   const [result, load, error] = useFetch(
     "http://localhost:3000/data/products.json"
   );
@@ -31,24 +32,18 @@ function Products() {
       <Breadcrumbs />
       <Filters />
 
-      <section className="main__products products">
-        <div id="produtosView">
-          <div className="products__row">
-            <ol className="products__list">
-              {produtos.products.map((e) => (
-                <Product
-                  key={e.id}
-                  description={e.name}
-                  price={e.price}
-                  image={`${e.image}`}
-                />
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
+      <ProductsComponent>
+        <OrderedList>
+          {produtos.products.map((e) => (
+            <Product
+              key={e.id}
+              description={e.name}
+              price={e.price}
+              image={`${e.image}`}
+            />
+          ))}
+        </OrderedList>
+      </ProductsComponent>
     </main>
   );
 }
-
-export default Products;

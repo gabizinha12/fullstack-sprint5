@@ -1,12 +1,13 @@
 import React from "react";
+import { ListItem, ItemLink, LinkSpan } from "./styles";
 
 function MenuItem({ label, link }) {
   return (
-    <li class="menu__item">
-      <a class="menu__link" href={link}>
-        <span>{label}</span>
-      </a>
-    </li>
+    <ListItem>
+      <ItemLink href={link}>
+        <LinkSpan>{label}</LinkSpan>
+      </ItemLink>
+    </ListItem>
   );
 }
 

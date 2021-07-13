@@ -1,15 +1,27 @@
 import React from "react";
-
-function Product({ description, image, price }) {
-  const img = require(`../../${image}`);
+import {
+  ListItem,
+  ItemFigure,
+  ItemLink,
+  ItemImage,
+  ItemFigcaption,
+  ItemPrice,
+} from "./styles";
+function Product({ description, image, price, name }) {
+  // const img = require(`../../${image}`);
   return (
-    <li className="products__card">
-      <div className="card">
-        <img className="card__img" src={image} alt="Produto" />
+    <ListItem>
+      <ItemFigure>
+        <ItemLink>
+          <ItemImage src={image} alt="Produto" />
+        </ItemLink>
+        <ItemFigcaption>{name}</ItemFigcaption>
         <p className="card__description">{description}</p>
-        <p className="card__price">R$ {price}</p>
-      </div>
-    </li>
+        <ItemPrice>
+          <span>R$ {price}</span>
+        </ItemPrice>
+      </ItemFigure>
+    </ListItem>
   );
 }
 

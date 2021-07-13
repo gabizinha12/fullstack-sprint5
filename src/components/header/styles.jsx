@@ -1,38 +1,75 @@
 import styled from "styled-components";
+
 export const Header = styled.header`
   width: 100%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid ${({ theme }) => theme.border};
+  background-color: ${({ theme }) => theme.body};
 `;
-export const HeaderContainer = styled.div`
+
+export const Container = styled.div`
   margin: auto;
   width: 95%;
   max-width: 1200px;
 `;
+
 export const Mobile = styled.div`
-  display: none;
+  display: ${(props) => (props.inactive ? "none" : "flex")};
   margin-bottom: 25px;
+  align-items: center;
   @media (max-width: 1200px) {
-    display: flex;
-    align-items: center;
+    display: ${(props) => (props.inactive ? "flex" : "none")};
+    margin-bottom: 0;
   }
 `;
-export const Desktop = styled.div``;
-export const HeaderDrawer = styled.div`
+
+export const Desktop = styled.div`
+  display: ${(props) => (props.active ? "flex" : "none")};
+  justify-content: center;
+  padding-top: 5px;
+  @media (max-width: 1200px) {
+    display: ${(props) => (props.active ? "none" : "flex")};
+  }
+`;
+
+export const Search = styled.div`
+  position: relative;
+`;
+
+export const Logo = styled.h1`
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const LogoImg = styled.img`
+  height: 25px;
+  transform: translateY(10px);
+  padding-top: 10px;
+`;
+
+export const Drawer = styled.div`
   width: 24px;
   opacity: 54%;
-  display: none;
+
+  display: ${(props) => (props.active ? "none" : "block")};
+  @media (max-width: 1200px) {
+    display: ${(props) => (props.active ? "block" : "none")};
+  }
+`;
+
+export const DrawerIcon = styled.img``;
+
+export const DrawerText = styled.p`
   text-transform: lowercase;
   font-size: 0.5625rem;
   font-weight: 400;
   line-height: 0;
-
-  &:active {
-    display: block;
-  }
 `;
 
-export const HeaderIcon = styled.img`
+export const SearchImg = styled.img`
   width: 24px;
   opacity: 26%;
   top: 8px;
@@ -41,41 +78,11 @@ export const HeaderIcon = styled.img`
   color: rgba(0, 0, 0, 0.26);
   line-height: 40px;
 `;
-export const HeaderInput = styled.input`
+
+export const SearchInput = styled.input`
   height: 40px;
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.23);
   padding-left: 40px;
-
-  &:hover {
-    border-color: #000;
-  }
-  &::placeholder {
-    font-size: 0.9375rem;
-    font-weight: 600;
-    font-family: "Open Sans";
-    color: #9b9b9b;
-  }
-`;
-export const HeaderImage = styled.img`
-  height: 25px;
-  transform: translateY(10px);
-`;
-export const HeaderLogo = styled.h1`
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  @media (max-width: 1200px) {
-    flex-grow: 1;
-  }
-`;
-export const HeaderSearch = styled.div`
-  position: relative;
-`;
-export const HeaderMenu = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 10px;
 `;

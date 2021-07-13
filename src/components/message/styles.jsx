@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Message = styled.section`
+export const MessageComponent = styled.section`
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
   border-radius: 4px;

@@ -1,4 +1,4 @@
-import FilterIcon from "../../assets/filter.svg";
+import FilterIcon from "../../../assets/filter.svg";
 import React from "react";
 import { ListItem, ItemLabel, ItemImage } from "./styles";
 
