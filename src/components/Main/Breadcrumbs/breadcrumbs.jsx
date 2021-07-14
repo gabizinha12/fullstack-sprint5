@@ -15,7 +15,6 @@ function Breadcrumbs() {
           return (
             <Fragment>
               <BreadcrumbItem key={index} value={breadcrumb.name} />
-              <li className="breadcrumbs__item  breadcrumbs__separator">/</li>
             </Fragment>
           );
         })}
