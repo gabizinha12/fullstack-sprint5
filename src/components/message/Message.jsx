@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
 import { MessageContext } from "../../contexts/MessageContext";
-import { MessageComponent } from "./styles";
+import { Container, ErrorMessage, SuccessMessage } from "./styles";
+
 export default function Message(props) {
   const getContext = useContext(MessageContext);
-  const { hasError, setHasError } = getContext;
+  const { hasError } = getContext;
   const successMsg = "Produtos carregados com sucesso";
   const errorMsg = "Erro ao carregar produtos";
   return (
-    <MessageComponent>
-      {hasError && <h1>{errorMsg}</h1>}
+    <Container>
+      {hasError && <ErrorMessage>{errorMsg}</ErrorMessage>}
 
-      {!hasError && <h1>{successMsg}</h1>}
-    </MessageComponent>
+      {!hasError && <SuccessMessage>{successMsg}</SuccessMessage>}
+    </Container>
   );
 }

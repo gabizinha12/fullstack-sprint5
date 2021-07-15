@@ -1,18 +1,38 @@
-import React, { useContext } from "react";
-import { CategoriasContext } from "../../contexts/CategoriasContext";
-import MenuItem from "./MenuItem/MenuItem";
-import { CategoriesNavbar, UnorderedList } from "./styles";
-
-function Menu() {
-  const categorias = useContext(CategoriasContext);
+import React from "react";
+import {
+  MobileVersion,
+  DesktopVersion,
+  Logo,
+  Drawer,
+  DrawerIcon,
+  DrawerText,
+} from "./styles";
+import MenuIcon from "../../assets/menu.svg";
+import CloseIcon from "../../assets/close.svg";
+import LogoResponsiveIcon from "../../assets/rchlo.svg";
+import LogoIcon from "../../assets/riachuelo.svg";
+export function Menu() {
   return (
-    <CategoriesNavbar>
-      <UnorderedList>
-        {categorias.categorias.all.map((el) => (
-          <MenuItem key={el.id} label={el.label} link={el.link} />
-        ))}
-      </UnorderedList>
-    </CategoriesNavbar>
+    <>
+      <DesktopVersion active>
+        <Logo>
+          <a href="/">{LogoIcon}</a>
+        </Logo>
+      </DesktopVersion>
+      <MobileVersion inactive>
+        <Drawer active>
+          <DrawerIcon src={MenuIcon} alt="menu" />
+          <DrawerText>menu</DrawerText>
+        </Drawer>
+
+        <Drawer>
+          <DrawerIcon src={CloseIcon} alt="fechar menu" />
+          <DrawerText>fechar</DrawerText>
+        </Drawer>
+
+        <Logo>{LogoResponsiveIcon}</Logo>
+      </MobileVersion>
+    </>
   );
 }
 
