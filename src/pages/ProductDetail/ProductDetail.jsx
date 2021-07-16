@@ -16,10 +16,26 @@ import {
 export function ProductDetail() {
   const produtosContext = useContext(ProductsContext);
   const { id } = useParams();
+  const [tamanhos, selectTamanho] = useState([]);
   const products = produtosContext.produtos.products.filter(
     (p) => p.sku == id
   )[0];
+
   console.log(products);
+  useEffect(() => {
+    const name = products ? products.name : "";
+    const tamanhos = name
+      .substr(name.indexOf("Tam"))
+      .replace("Tam", "")
+      .replaceAll(" ", "")
+      .split("a")
+      .map((t) => parseInt(t));
+    const arr = [];
+    for (let i = tamanhos[0]; i < tamanhos[1]; i++) {
+      arr.push(parseInt(i));
+    }
+    selectTamanho(arr);
+  }, []);
   return (
     <>
       <Container>
@@ -32,8 +48,12 @@ export function ProductDetail() {
 
         <ContainerInfo>
           <LabelDesc>{products && products.name}</LabelDesc>
-
-          <p>Selecionar Tamanho: </p>
+          <div>
+            <p>Selecionar Tamanho: </p>
+            {tamanhos.map((t) => (
+              <p>{t}</p>
+            ))}
+          </div>
 
           <BoxPrice>
             <LabelPrice>R$ {products && products.price}</LabelPrice>
