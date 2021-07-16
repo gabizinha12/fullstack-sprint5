@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import GooglePlayIcon from "../../assets/google-play.webp";
 import AppStoreIcon from "../../assets/app-store.webp";
@@ -28,7 +28,7 @@ import CertificatedIcon from "../../assets/ra1000.webp";
 // styles
 import "./Footer.css";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="footer">
       <section className="footer__contact">
@@ -130,9 +130,7 @@ export default function Footer() {
             <li className="company-links">
               <h3 className="company-links__title">Sobre a Riachuelo</h3>
               <ul>
-                <li
-                  className="company-links__item"
-                >
+                <li className="company-links__item">
                   <a className="company-links__text" href="/">
                     A Empresa
                   </a>
@@ -366,3 +364,4 @@ export default function Footer() {
     </footer>
   );
 }
+export default Footer;

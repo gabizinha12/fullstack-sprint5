@@ -1,6 +1,6 @@
 import React from "react";
 import { ListItem, ItemLink } from "./styles";
-function BreadcrumbItem({ value }) {
+export function BreadcrumbItem({ value }) {
   return (
     <ListItem>
       <ItemLink>{value}</ItemLink>

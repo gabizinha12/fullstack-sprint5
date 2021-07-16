@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import { Home } from "./pages/Home/Home";
 import { ProductsDetail } from "./pages/ProductDetail/ProductDetail";
-import { Search } from "./components/Search";
+import { Search } from "./components/Search/Search";
 import { MessageProvider } from "./contexts/MessageContext";
 import { CatgoriasContext } from "./contexts/CategoriasContext";
 import { ProdutosContext } from "./contexts/ProductsContext";

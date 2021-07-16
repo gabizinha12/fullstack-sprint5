@@ -5,7 +5,11 @@ export function Search() {
   return (
     <Container>
       <SearchIcon src={searchIcon} />
-      <SearchInput type="search" placeholder="O que está procurando?" />
+      <SearchInput
+        data-testid="searchInput"
+        type="search"
+        placeholder="O que está procurando?"
+      />
     </Container>
   );
 }

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import { ProductsContext } from "../../../contexts/ProductsContext";
-import Product from "../Product/Product";
+import { ProductsContext } from "../../contexts/ProductsContext";
+import Product from "./Product/Product";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import Filters from "../Filters/Filters";
 
 // hooks
-import { useFetch } from "../../../hooks/useFetch";
-import { LoadingContext } from "../../../contexts/LoadingContext";
+import { useFetch } from "../../hooks/useFetch";
+import { LoadingContext } from "../../contexts/LoadingContext";
 import { ProductsComponent, OrderedList } from "./styles";
 
 export default function Products() {

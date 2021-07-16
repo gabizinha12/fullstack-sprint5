@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ProductsContext } from "../../../contexts/ProductsContext";
+import { ProductsContext } from "../../contexts/ProductsContext";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 export function ProductDetail() {
   const { id } = useParams();
