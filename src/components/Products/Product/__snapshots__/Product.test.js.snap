@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de snapshot produto should render product 1`] = `
+<li
+  class="sc-bdnxRM egDJlx"
+>
+  <figure
+    class="sc-gtsrHT"
+  >
+    <a
+      href="/product-detail/10"
+    >
+      <img
+        alt="Produto"
+        class="sc-hKFxyN gcWuxB"
+        src="aaa"
+      />
+      <figcaption
+        class="sc-eCApnc dQrqnr"
+      >
+        abc
+      </figcaption>
+      <p
+        class="card__description"
+      >
+        teste
+      </p>
+      <figcaption
+        class="sc-jSFjdj bEIScR"
+      >
+        <span>
+          R$ 
+          10,99
+        </span>
+      </figcaption>
+    </a>
+  </figure>
+</li>
+`;

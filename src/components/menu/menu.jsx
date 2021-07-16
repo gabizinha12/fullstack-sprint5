@@ -10,7 +10,7 @@ import {
 import MenuIcon from "../../assets/menu.svg";
 import CloseIcon from "../../assets/close.svg";
 import LogoResponsiveIcon from "../../assets/rchlo.svg";
-import LogoIcon from "../../assets/riachuelo.svg";
+// import LogoIcon from "../../assets/riachuelo.svg";
 import { Categories } from "../Categories/Categories";
 export function Menu() {
   return (

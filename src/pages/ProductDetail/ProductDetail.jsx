@@ -51,7 +51,7 @@ export function ProductDetail() {
           <div>
             <p>Selecionar Tamanho: </p>
             {tamanhos.map((t) => (
-              <p>{t}</p>
+              <p key={t}>{t}</p>
             ))}
           </div>
 

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de snapshot not found should render not found 1`] = `
+<img
+  alt="Error image"
+  class="sc-bdnxRM hmQuKM"
+  src="not_found.svg"
+/>
+`;

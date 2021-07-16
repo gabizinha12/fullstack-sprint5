@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de snapshot MenuItem should render MenuItem 1`] = `
+<li
+  class="sc-bdnxRM"
+>
+  <a
+    class="sc-gtsrHT ijhrOz"
+    href="teste"
+  >
+    <span
+      class="sc-dlnjwi"
+    >
+      abc
+    </span>
+  </a>
+</li>
+`;

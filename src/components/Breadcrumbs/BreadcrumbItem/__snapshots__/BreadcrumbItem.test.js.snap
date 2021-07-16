@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de snapshot BreadcrumbItem should render BreadcrumbItem 1`] = `
+<li
+  class="sc-bdnxRM iHSEBR"
+>
+  <a
+    class="sc-gtsrHT hToJZB"
+  >
+    aaa
+  </a>
+</li>
+`;

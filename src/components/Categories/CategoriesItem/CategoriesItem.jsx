@@ -1,7 +1,6 @@
 import { ListItem, ItemLink, LinkSpan } from "./styles";
 
-export function CategoriesItem(props) {
-  const { label, link } = props;
+export function CategoriesItem({ label, link }) {
   return (
     <ListItem>
       <ItemLink href={link}>
