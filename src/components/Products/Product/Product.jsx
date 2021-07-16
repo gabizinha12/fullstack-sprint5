@@ -10,17 +10,18 @@ import {
 } from "./styles";
 function Product({ description, image, price, name, sku }) {
   // const img = require(`../../${image}`);
+  // console.log(sku);
   return (
     <ListItem>
       <ItemFigure key={sku}>
-        <ItemLink to={`/product/${sku}`}>
+        <Link to={`/product-detail/${sku}`}>
           <ItemImage src={image} alt="Produto" />
-        </ItemLink>
-        <ItemFigcaption>{name}</ItemFigcaption>
-        <p className="card__description">{description}</p>
-        <ItemPrice>
-          <span>R$ {price}</span>
-        </ItemPrice>
+          <ItemFigcaption>{name}</ItemFigcaption>
+          <p className="card__description">{description}</p>
+          <ItemPrice>
+            <span>R$ {price}</span>
+          </ItemPrice>
+        </Link>
       </ItemFigure>
     </ListItem>
   );

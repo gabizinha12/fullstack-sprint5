@@ -125,6 +125,13 @@ export const PriceButtons = styled.div`
   width: 100%;
   margin: 0 10px;
 `;
+export const NotFound = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+`;
 
 export const PriceButton = styled.button`
   width: 100%;

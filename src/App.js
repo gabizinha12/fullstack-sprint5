@@ -10,6 +10,7 @@ import { ProdutosContext } from "./contexts/ProductsContext";
 import { LoadContext } from "./contexts/LoadingContext";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { Header } from "./components/Header/Header";
+import { Routes } from "./Routes/Routes";
 import Message from "./components/Message/Message";
 import Loading from "./components/Loading/Loading";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -25,7 +26,7 @@ function App() {
             <MessageProvider>
               <Message />
               <Header />
-              <Home />
+              <Routes />
               <Footer />
             </MessageProvider>
           </CatgoriasContext>

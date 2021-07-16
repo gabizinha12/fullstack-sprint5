@@ -40,6 +40,7 @@ export function Products() {
               description={e.name}
               price={e.price}
               image={`${e.image}`}
+              sku={e.sku}
             />
           ))}
         </OrderedList>
