@@ -9,6 +9,7 @@ import { CatgoriasContext } from "./contexts/CategoriasContext";
 import { ProdutosContext } from "./contexts/ProductsContext";
 import { LoadContext } from "./contexts/LoadingContext";
 import { GlobalStyle } from "./styles/GlobalStyle";
+import { Header } from "./components/Header/Header";
 import Message from "./components/Message/Message";
 import Loading from "./components/Loading/Loading";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -23,7 +24,7 @@ function App() {
           <CatgoriasContext>
             <MessageProvider>
               <Message />
-              <Search />
+              <Header />
               <Home />
               <Footer />
             </MessageProvider>

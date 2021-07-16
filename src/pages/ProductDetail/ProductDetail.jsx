@@ -9,7 +9,8 @@ export function ProductDetail() {
     "http://localhost:3000/data/products.json"
   );
   const produtosData = useContext(ProductsContext);
-  const { produtos, setProdutos } = produtosData;
+  const [produto, setProduto] = useState({});
+  const [selectedSize, SetSelectedSize] = useState(4);
   useEffect(() => {
     console.log(produtos);
     setProdutos({

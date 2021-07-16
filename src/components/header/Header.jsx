@@ -27,11 +27,10 @@ import Menu from "../Menu/Menu";
 export function Header() {
   const categoriasData = useContext(CategoriasContext);
   const { categorias, setCategorias } = categoriasData;
-  const [response, loading, error] = useFetch(
-    "http://localhost:3000/data/categories.json"
-  );
+  const [response, loading, error] = useFetch("/data/categories.json");
 
   useEffect(() => {
+    console.log(categorias);
     setCategorias({
       ...categorias,
       all: response ? response.all : [],
@@ -43,8 +42,7 @@ export function Header() {
       <Container>
         <Mobile inactive>
           <Drawer active>
-            <DrawerIcon src={MenuIcon} alt="menu" />
-            <DrawerText>menu</DrawerText>
+            <DrawerIcon />
           </Drawer>
 
           <Drawer>

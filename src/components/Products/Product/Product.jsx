@@ -12,7 +12,7 @@ function Product({ description, image, price, name, sku }) {
   // const img = require(`../../${image}`);
   return (
     <ListItem>
-      <ItemFigure>
+      <ItemFigure key={sku}>
         <ItemLink to={`/product/${sku}`}>
           <ItemImage src={image} alt="Produto" />
         </ItemLink>

@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { CategoriasContext } from "../../contexts/CategoriasContext";
 import { CategoriesItem } from "./CategoriesItem/CategoriesItem";
 import { Navbar, UnorderedList } from "./styles";

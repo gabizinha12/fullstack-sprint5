@@ -11,13 +11,14 @@ import MenuIcon from "../../assets/menu.svg";
 import CloseIcon from "../../assets/close.svg";
 import LogoResponsiveIcon from "../../assets/rchlo.svg";
 import LogoIcon from "../../assets/riachuelo.svg";
+import { Categories } from "../Categories/Categories";
 export function Menu() {
   return (
     <>
       <DesktopVersion active>
-        <Logo>
-          <a href="/">{LogoIcon}</a>
-        </Logo>
+        {/* <Logo>
+          <LogoImg src={LogoIcon} />
+        </Logo> */}
       </DesktopVersion>
       <MobileVersion inactive>
         <Drawer active>
@@ -30,8 +31,9 @@ export function Menu() {
           <DrawerText>fechar</DrawerText>
         </Drawer>
 
-        <Logo>{LogoResponsiveIcon}</Logo>
+        <Logo src={LogoResponsiveIcon} />
       </MobileVersion>
+      <Categories />
     </>
   );
 }

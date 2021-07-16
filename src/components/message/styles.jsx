@@ -20,7 +20,7 @@ export const SuccessMessage = styled.h1`
   background-color: #1cef5b;
   border: 1px solid #a4d6ad;
   border-radius: 4px;
-  color: #a4d6ad;
+  color: #000;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   padding: 10px;

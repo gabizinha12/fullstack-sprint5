@@ -2,9 +2,8 @@ import React, { Fragment, useContext } from "react";
 import { BreadcrumbItem } from "./BreadcrumbItem/BreadcrumbItem";
 import { CategoriasContext } from "../../contexts/CategoriasContext";
 import { Breadcrumbs as BreadcrumbsComponent, OrderedList } from "./styles";
-function Breadcrumbs() {
+export function Breadcrumbs() {
   const breadcrumbsMenu = useContext(CategoriasContext);
-  console.log(breadcrumbsMenu);
   return (
     <BreadcrumbsComponent>
       <OrderedList>

@@ -2,7 +2,7 @@ import FilterItem from "./FilterItem/FilterItem";
 import React, { useContext } from "react";
 import { ProductsContext } from "../../contexts/ProductsContext";
 import { Filter, UnorderedList } from "./styles";
-function Filters() {
+export function Filters() {
   const filterData = useContext(ProductsContext);
   const { produtos } = filterData;
   return (

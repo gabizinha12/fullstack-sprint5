@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.section`
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.border};
+  border-bottom: 2px solid #ddd;
   background-color: ${({ theme }) => theme.body};
   margin-bottom: 16px;
 `;
