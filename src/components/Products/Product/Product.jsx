@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ListItem,
   ItemFigure,
@@ -7,12 +8,12 @@ import {
   ItemFigcaption,
   ItemPrice,
 } from "./styles";
-function Product({ description, image, price, name }) {
+function Product({ description, image, price, name, sku }) {
   // const img = require(`../../${image}`);
   return (
     <ListItem>
       <ItemFigure>
-        <ItemLink>
+        <ItemLink to={`/product/${sku}`}>
           <ItemImage src={image} alt="Produto" />
         </ItemLink>
         <ItemFigcaption>{name}</ItemFigcaption>

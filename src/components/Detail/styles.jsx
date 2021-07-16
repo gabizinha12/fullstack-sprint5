@@ -20,8 +20,6 @@ export const Breadcrumbs = styled.section`
     }
 `
 
-
-
 export const Details = styled.section`
     display:flex;
     height:100%;
@@ -97,6 +95,10 @@ export const Button = styled.button`
     padding: 8px 12px;
     cursor:pointer;
     &:hover{
+        background-color:black;
+        color:white;
+    }    
+    &:active{
         background-color:black;
         color:white;
     }
