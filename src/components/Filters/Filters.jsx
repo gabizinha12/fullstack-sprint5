@@ -6,9 +6,9 @@ export function Filters() {
   const filterData = useContext(ProductsContext);
   const { produtos } = filterData;
   return (
-    <Filter>
+    <Filter data-testid="filter">
       <UnorderedList>
-        {produtos.filters.map((filter) => (
+        {produtos?.filters.map((filter) => (
           <FilterItem label={filter.label} key={filter.id} />
         ))}
       </UnorderedList>

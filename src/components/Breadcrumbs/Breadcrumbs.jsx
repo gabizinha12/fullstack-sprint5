@@ -7,7 +7,7 @@ export function Breadcrumbs() {
   return (
     <BreadcrumbsComponent data-testid="breadcrumb">
       <OrderedList>
-        {breadcrumbsMenu.categorias.current.map((breadcrumb, index, arr) => {
+        {breadcrumbsMenu.categorias?.current.map((breadcrumb, index, arr) => {
           if (index === arr.length - 1) {
             return <BreadcrumbItem key={index} value={breadcrumb.name} />;
           }
