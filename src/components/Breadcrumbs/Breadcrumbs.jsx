@@ -5,7 +5,7 @@ import { Breadcrumbs as BreadcrumbsComponent, OrderedList } from "./styles";
 export function Breadcrumbs() {
   const breadcrumbsMenu = useContext(CategoriasContext);
   return (
-    <BreadcrumbsComponent>
+    <BreadcrumbsComponent data-testid="breadcrumb">
       <OrderedList>
         {breadcrumbsMenu.categorias.current.map((breadcrumb, index, arr) => {
           if (index === arr.length - 1) {

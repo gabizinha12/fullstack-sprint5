@@ -2,7 +2,7 @@ import FilterIcon from "../../../assets/filter.svg";
 import React from "react";
 import { ListItem, ItemLabel, ItemImage } from "./styles";
 
-function FilterItem({ label }) {
+export function FilterItem({ label }) {
   return (
     <ListItem>
       <ItemLabel>{label}</ItemLabel>
@@ -10,5 +10,3 @@ function FilterItem({ label }) {
     </ListItem>
   );
 }
-
-export default FilterItem;

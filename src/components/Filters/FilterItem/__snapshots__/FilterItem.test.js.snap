@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de snapshot FilterItem should render FilterItem 1`] = `
+<li
+  class="sc-bdnxRM kYenBY"
+>
+  <span
+    class="sc-gtsrHT bAmSmd"
+  >
+    abc
+  </span>
+  <img
+    alt="ícone de filtro"
+    class="sc-dlnjwi ckhPXh"
+    src="filter.svg"
+  />
+</li>
+`;
