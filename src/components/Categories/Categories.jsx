@@ -9,7 +9,7 @@ export function Categories() {
   return (
     <Navbar>
       <UnorderedList>
-        {categorias.categorias.all.map((el) => (
+        {categorias?.categorias.all.map((el) => (
           <CategoriesItem key={el.id} label={el.label} link={el.link} />
         ))}
       </UnorderedList>

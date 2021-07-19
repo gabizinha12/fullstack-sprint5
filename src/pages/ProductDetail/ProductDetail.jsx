@@ -27,7 +27,7 @@ export function ProductDetail() {
     const tamanhos = name
       .substr(name.indexOf("Tam"))
       .replace("Tam", "")
-      .replaceAll(" ", "")
+      .replaceAll(" ", "") // separa tam do tamanho da roupa
       .split("a")
       .map((t) => parseInt(t));
     const arr = [];
