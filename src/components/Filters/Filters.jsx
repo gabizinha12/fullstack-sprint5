@@ -1,4 +1,4 @@
-import FilterItem from "./FilterItem/FilterItem";
+import { FilterItem } from "./FilterItem/FilterItem";
 import React, { useContext } from "react";
 import { ProductsContext } from "../../contexts/ProductsContext";
 import { Filter, UnorderedList } from "./styles";

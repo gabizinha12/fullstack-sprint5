@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ProductsContext } from "../../contexts/ProductsContext";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
   ContainerImg,
   ProductImg,
@@ -10,10 +10,12 @@ import {
   LabelDesc,
   LabelPrice,
   BoxPrice,
+  BoxSize,
   Btn,
   Container,
 } from "./styles";
 export function ProductDetail() {
+  let history = useHistory();
   const produtosContext = useContext(ProductsContext);
   const { id } = useParams();
   const [tamanhos, selectTamanho] = useState([]);
@@ -36,6 +38,12 @@ export function ProductDetail() {
     }
     selectTamanho(arr);
   }, []);
+  function goBack() {
+    history.push("/");
+  }
+  function addProduct() {
+    alert("Produto adicionado com sucesso");
+  }
   return (
     <>
       <Container>
@@ -48,22 +56,24 @@ export function ProductDetail() {
 
         <ContainerInfo>
           <LabelDesc>{products && products.name}</LabelDesc>
-          <div>
+          <BoxSize>
             <p>Selecionar Tamanho: </p>
             {tamanhos.map((t) => (
               <p key={t}>{t}</p>
             ))}
-          </div>
+          </BoxSize>
 
           <BoxPrice>
             <LabelPrice>R$ {products && products.price}</LabelPrice>
 
             <div style={{ width: "100%" }}>
-              <Btn bg="#008000" mb="12">
+              <Btn bg="#008000" mb="12" onClick={addProduct}>
                 ADICIONAR À SACOLA
               </Btn>
 
-              <Btn bg="#d50000">CANCELAR</Btn>
+              <Btn bg="#d50000" onClick={goBack}>
+                CANCELAR
+              </Btn>
             </div>
           </BoxPrice>
         </ContainerInfo>

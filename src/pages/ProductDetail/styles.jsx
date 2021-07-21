@@ -24,7 +24,16 @@ export const ContainerInfo = styled.div`
   justify-content: space-between;
   padding: 30px 10px;
 `;
-
+export const BoxSize = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 175px;
+  padding: 15px;
+  border-radius: 2px;
+`;
 export const BoxPrice = styled.div`
   display: flex;
   flex-direction: column;
